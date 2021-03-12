@@ -96,7 +96,7 @@ export default class UserList extends React.Component {
     return (
       <Root>
         <SafeAreaView>
-          <HeaderComponent title="Users" />
+          <HeaderComponent bgColor={AppColor.searchArticle} title="Users" />
 
           <Loader loading={this.state.isLoading} />
           {this.context.isConnected ? this.renderFlatlist() : null}

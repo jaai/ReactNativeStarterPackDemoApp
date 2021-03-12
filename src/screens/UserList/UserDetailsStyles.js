@@ -128,8 +128,8 @@ const UserDetailsStyles = StyleSheet.create({
   row_img: {
     height: '100%',
     overflow: 'hidden',
-    width: '100%',
-    borderRadius: 180 / 2,
+    width: '50%',
+    borderRadius: 100 / 1,
     paddingLeft: 16,
     flex: 0,
   },

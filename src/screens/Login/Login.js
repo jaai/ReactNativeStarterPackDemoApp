@@ -28,64 +28,46 @@ export default class App extends React.Component {
           flex: 1,
           width: '100%',
           justifyContent: 'center',
-          backgroundColor: '#986776',
+          backgroundColor: '#2475B0',
           alignItems: 'center',
-          alignContent: 'space-between',
         }}>
-        <KeyboardAvoidingView behavior={this.state.behavior}>
+        <KeyboardAvoidingView
+          style={{
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            width: '80%',
+          }}
+          behavior={this.state.behavior}>
           <View
             style={{
               padding: 15,
-              flexDirection: 'row',
-              width: '80%',
-
+              width: '100%',
               overflow: 'hidden',
               borderRadius: 20,
               borderWidth: 1,
               justifyContent: 'center',
               alignItems: 'center',
-              alignContent: 'space-between',
               backgroundColor: AppColor.white,
             }}>
-            <TextInput />
+            <TextInput
+              placeholder="Email..."
+              onChangeText={(text) => this.setState({email: text})}></TextInput>
+
+            <TextInput
+              placeholder="Password..."
+              onChangeText={(text) =>
+                this.setState({password: text})
+              }></TextInput>
+
+            <TouchableOpacity
+              onPress={() => this.onLoginButtonPress()}
+              style={LoginStyles.loginBtn}>
+              <Text style={LoginStyles.loginText}>LOGIN</Text>
+            </TouchableOpacity>
           </View>
         </KeyboardAvoidingView>
       </View>
-      // <View style={LoginStyles.container}>
-      //   <Text style={LoginStyles.logo}>React Native</Text>
-      //   <View style={{backgroundColor: AppColor.white}}></View>
-      //   <View style={LoginStyles.inputView}>
-      //     <TextInput
-      //       style={LoginStyles.inputText}
-      //       placeholder="Email..."
-      //       placeholderTextColor="#003f5c"
-      //       onChangeText={(text) => this.setState({email: text})}
-      //     />
-      //   </View>
-      //   <View style={LoginStyles.inputView}>
-      //     <TextInput
-      //       secureTextEntry
-      //       style={LoginStyles.inputText}
-      //       placeholder="Password..."
-      //       y
-      //       placeholderTextColor="#003f5c"
-      //       onChangeText={(text) => this.setState({password: text})}
-      //     />
-      //   </View>
-      //   <TouchableOpacity>
-      //     <Text style={LoginStyles.forgot} onPress={() => this.onPressButton()}>
-      //       Forgot Password
-      //     </Text>
-      //   </TouchableOpacity>
-      //   <TouchableOpacity
-      //     onPress={() => this.onLoginButtonPress()}
-      //     style={LoginStyles.loginBtn}>
-      //     <Text style={LoginStyles.loginText}>LOGIN</Text>
-      //   </TouchableOpacity>
-      //   <TouchableOpacity>
-      //     <Text style={LoginStyles.loginText}>Signup</Text>
-      //   </TouchableOpacity>
-      // </View>
     );
   }
   onPressButton() {

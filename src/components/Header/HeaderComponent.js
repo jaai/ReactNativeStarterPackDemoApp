@@ -10,7 +10,7 @@ const _handleSearch = () => console.log('Searching');
 const _handleMore = () => console.log('Shown more');
 const HeaderComponent = (props) => {
   return (
-    <Appbar.Header style={{backgroundColor: AppColor.searchArticle}}>
+    <Appbar.Header style={{backgroundColor: props.bgColor}}>
       {props.backEnabled ? (
         <Appbar.BackAction onPress={props.handleBackpress} />
       ) : (

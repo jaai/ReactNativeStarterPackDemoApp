@@ -52,7 +52,7 @@ const LoginStyles = StyleSheet.create({
   },
   loginBtn: {
     width: '80%',
-    backgroundColor: AppColor.black,
+    backgroundColor: '#2475B0',
     borderRadius: 25,
     height: 50,
     alignItems: 'center',
